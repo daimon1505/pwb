@@ -1,6 +1,6 @@
 # The season you call home
 
-**Start here: [World Rules — illustrated guide](WORLD_RULES.md)** · Places, controls, seasons, and simulation behavior.
+**Start here: [World Rules — illustrated guide](my-app/WORLD_RULES.md)** · Places, controls, seasons, and simulation behavior.
 
 A pastel, shoujo-inspired worldbuilding prototype built with React, Vite, and Three.js. Explore a voxel neighborhood, walk its streets, enter your bedroom, and experiment with seasons, weather, plants, and rendering styles.
 
@@ -119,28 +119,28 @@ npm run preview  # Serve the production build locally
 npm run lint     # ESLint across the project
 ```
 
-There is no dedicated automated test script in `package.json` yet. The build currently emits a large-bundle advisory. Full-project lint has previously reported unused variables and empty catch blocks in the legacy `src/GeoCanvas.jsx`; it is not used by the current world interface.
+There is no dedicated automated test script in `my-app/package.json` yet. The build currently emits a large-bundle advisory. Full-project lint has previously reported unused variables and empty catch blocks in the legacy `my-app/src/GeoCanvas.jsx`; it is not used by the current world interface.
 
-`firebase.json` configures Firebase Hosting to serve `dist/` with an SPA fallback to `index.html`. Building does not deploy the site.
+`my-app/firebase.json` configures Firebase Hosting to serve `dist/` with an SPA fallback to `index.html`. Building does not deploy the site.
 
 ## Project structure
 
 | Path | Purpose |
 | --- | --- |
-| `src/App.jsx` | Shared state, navigation, update loop, control layout |
-| `src/NeighborhoodCanvas.jsx` | Voxel buildings, labels, picking, overview rendering |
-| `src/RoomCanvas.jsx` | Bedroom scene and seasonal furnishings |
-| `src/streetView.js` | Ground-level navigation and movement boundaries |
-| `src/seasons.js` | Seasonal palettes and descriptions |
-| `src/weatherSimulation.js` | Availability, clocks, rates, and reset rules |
-| `src/weatherScene.js` | Visual weather, puddles, snow layers, and plants |
-| `src/WeatherControls.jsx` | Simulation controls and readouts |
-| `src/worldShaders.js` | Shared rendering effects |
-| `src/ControlSection.jsx` | Collapsible sections |
-| `src/firebase.js`, `src/auth.js`, `src/profile.js` | Firebase setup, authentication, and profiles |
-| `src/App.css`, `src/index.css` | Interface styling |
-| `WORLD_RULES.md` | Detailed current world rules |
-| `../STYLE-GUIDE.md` | Repository visual style guide |
+| `my-app/src/App.jsx` | Shared state, navigation, update loop, control layout |
+| `my-app/src/NeighborhoodCanvas.jsx` | Voxel buildings, labels, picking, overview rendering |
+| `my-app/src/RoomCanvas.jsx` | Bedroom scene and seasonal furnishings |
+| `my-app/src/streetView.js` | Ground-level navigation and movement boundaries |
+| `my-app/src/seasons.js` | Seasonal palettes and descriptions |
+| `my-app/src/weatherSimulation.js` | Availability, clocks, rates, and reset rules |
+| `my-app/src/weatherScene.js` | Visual weather, puddles, snow layers, and plants |
+| `my-app/src/WeatherControls.jsx` | Simulation controls and readouts |
+| `my-app/src/worldShaders.js` | Shared rendering effects |
+| `my-app/src/ControlSection.jsx` | Collapsible sections |
+| `my-app/src/firebase.js`, `my-app/src/auth.js`, `my-app/src/profile.js` | Firebase setup, authentication, and profiles |
+| `my-app/src/App.css`, `my-app/src/index.css` | Interface styling |
+| `my-app/WORLD_RULES.md` | Detailed current world rules |
+| `STYLE-GUIDE.md` | Repository visual style guide |
 
 Legacy terrain/noise components remain in the source tree but are not part of the current interface.
 
@@ -152,4 +152,4 @@ Legacy terrain/noise components remain in the source tree but are not part of th
 - Simulated extra snow layers cover selected original buildings, not every expanded-neighborhood roof.
 - High-density street blocks can show patchiness from small voxel gaps, overlapping geometry, or occlusion. Continuous-road cleanup is not implemented.
 
-Keep this README focused on getting started. Update [WORLD_RULES.md](WORLD_RULES.md) when behavior changes.
+Keep this README focused on getting started. Update [WORLD_RULES.md](my-app/WORLD_RULES.md) when behavior changes.
